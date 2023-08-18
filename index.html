@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo de Operadores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="WMMS.png" alt="Logo de la empresa">
+        <h3>Monitoreos</h3>
+    </header>
+
+    <section id="opciones">
+        <!--Elegir mes-->
+        <section id="seccionMeses">
+            <label for="selectMeses">Selecciona un mes:</label>
+            <select id="selectMeses">
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <option value="abril">Abril</option>
+                <option value="mayo">Mayo</option>
+                <option value="junio">Junio</option>
+                <option value="julio">Julio</option>
+                <option value="agosto">Agosto</option>
+                <option value="septiembre">Septiembre</option>
+                <option value="octubre">Octubre</option>
+                <option value="noviembre">Noviembre</option>
+                <option value="diciembre">Diciembre</option>
+            </select>
+        </section> 
+        <!--Elegir evaluador-->
+        <section id="seccionEvaluador">
+            <label for="selectEvaluador">Evaluador:</label>
+            <select id="selectEvaluador">
+                <option value="carolina">Carolina Ledesma</option>
+                <option value="mariana">Mariana Gatti</option>
+            </select>
+        </section>
+        <!--Elegir monitoreo-->
+        <section id="seccionTipoMonitoreo">
+            <label for="selectTipoMonitoreo">Tipo de monitoreo:</label>
+            <select id="selectTipoMonitoreo">
+                <option value="chat">Monitoreo de chat</option>
+                <option value="coordinacion">Monitoreo de coordinación</option>
+            </select>
+        </section>
+        <!--Elegir operador-->
+        <section id="seccionOps">
+            <label for="selectOps">Selecciona un operador:</label>
+            <select id="selectOps">
+                <!--Acá van los operadores-->
+            </select>
+        </section>
+        
+    </section>
+    
+    <!--Monitorear-->
+    <section id="SecBotonMonitorear">
+        <button id="botonMonitorear">Monitorear</button>
+    </section>
+
+    <!--Monitoreo a realizar-->
+    <section id="tablaMonitoreo">
+        <table id="tablaChat">
+            <tbody>
+                <tr>
+                    <th id="operadorElegido"></th>
+                </tr>
+                <tr>
+                    <th>Preguntas (CHAT)</th>
+                    <th>Si</th>
+                    <th>No</th>
+                    <th>No aplica</th>
+                </tr>
+                <tr>
+                    <td>El OP. Responde la solicitud en los tiempos establecidos por WMC (3 min)?/5 min en caso de ser un TKT en curso?</td>
+                    <td><input type="checkbox" data-pregunta="1" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="1" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="1" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Se presenta con su nombre y se dispone a comprender lo que PAX necesita de nuestro servicio?</td>
+                    <td><input type="checkbox" data-pregunta="2" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="2" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="2" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Titula correctamente el asunto de la conversación?</td>
+                    <td><input type="checkbox" data-pregunta="3" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="3" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="3" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Puede detectar el ánimo de PAX mientras hace la solicitud?</td>
+                    <td><input type="checkbox" data-pregunta="4" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="4" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="4" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El Op. responde a pax dentro del contexto de TRIAGE correspondiente al síntoma de pax?</td>
+                    <td><input type="checkbox" data-pregunta="5" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="5" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="5" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Se presdispone a escuchar, si es necesario a llamar a PAX, para que éste haga su descargo en cuanto a la situación por la que se contacta?</td>
+                    <td><input type="checkbox" data-pregunta="6" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="6" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="6" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Solicita la información necesaria para la apertura y gestión del caso?/Responde asertivamente sobre el caso en curso?</td>
+                    <td><input type="checkbox" data-pregunta="7" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="7" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="7" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Informa el número de TKT bajo el que se gestiona la solicitud de PAX?</td>
+                    <td><input type="checkbox" data-pregunta="8" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="8" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="8" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Es capaz de responder (en el plazo de 5 min.)en que estapa de gestión está el caso?</td>
+                    <td><input type="checkbox" data-pregunta="9" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="9" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="9" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Conoce (CCGG) y enmarca la asistencia en base a esto?</td>
+                    <td><input type="checkbox" data-pregunta="10" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="10" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="10" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Da respuesta asertiva al PAX respecto del status de su caso?</td>
+                    <td><input type="checkbox" data-pregunta="11" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="11" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="11" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Explica los pasos de la gestión, y que debe ocurrir para el próximo contacto del OP. a PAX?</td>
+                    <td><input type="checkbox" data-pregunta="12" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="12" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="12" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Explica a PAX como proceder para obtener el servicio con nuestro prestador?</td>
+                    <td><input type="checkbox" data-pregunta="13" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="13" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="13" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Queda a disposición de PAX para guiarlo en posterior a la fecha del servicio?</td>
+                    <td><input type="checkbox" data-pregunta="14" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="14" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="14" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El OP. Hace CCall?</td>
+                    <td><input type="checkbox" data-pregunta="15" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="15" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="15" data-respuesta="no_aplica"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table id="tablaCoordinacion">
+            <tbody>
+                <tr>
+                    <th id="operadorElegidoC"></th>
+                </tr>
+                <tr>
+                    <th>Preguntas (COORDINACIÓN)</th>
+                    <th>Si</th>
+                    <th>No</th>
+                    <th>No aplica</th>
+                </tr>
+                <tr>
+                    <td>Responde los correos electrónicos dentro de los tiempos determinados por WMC (10 minutos?)</td>
+                    <td><input type="checkbox" data-pregunta="1" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="1" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="1" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>Mantiene informado al Cliente en cuanto al tiempo del proceso de la gestión?</td>
+                    <td><input type="checkbox" data-pregunta="2" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="2" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="2" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El COO Titula correctamente el asunto del mail?</td>
+                    <td><input type="checkbox" data-pregunta="3" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="3" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="3" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>Conoce los prestadores actuales en la zona?</td>
+                    <td><input type="checkbox" data-pregunta="4" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="4" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="4" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>Solicita autorización en caso que se necesite actualizar costos?</td>
+                    <td><input type="checkbox" data-pregunta="5" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="5" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="5" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El COO. Utiliza los templates que optimizan el contacto y la cantidad de intercambios de correos con los prestadores?</td>
+                    <td><input type="checkbox" data-pregunta="6" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="6" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="6" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El COO. Chequea con el Provider que reciban a PAX y la disponibilidada horaria?</td>
+                    <td><input type="checkbox" data-pregunta="7" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="7" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="7" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El COO. Confirma la recepción de VOB?</td>
+                    <td><input type="checkbox" data-pregunta="8" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="8" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="8" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El COO deja registro de la persona con quien confirmó la recepción y aceptación de VOB?</td>
+                    <td><input type="checkbox" data-pregunta="9" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="9" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="9" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El COO comunica al OP/Cliente los datos de la consulta confirmada?</td>
+                    <td><input type="checkbox" data-pregunta="10" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="10" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="10" data-respuesta="no_aplica"></td>
+                </tr>
+                <tr>
+                    <td>El COO. Gestiona la mailera correctamente guardando los correos respondidos, y luego de dejar registro en el caso, en la carpeta de gestionados?</td>
+                    <td><input type="checkbox" data-pregunta="11" data-respuesta="si"></td>
+                    <td><input type="checkbox" data-pregunta="11" data-respuesta="no"></td>
+                    <td><input type="checkbox" data-pregunta="11" data-respuesta="no_aplica"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="SecBotonFinalizar">
+        <button id="botonFinalizar">Finalizar monitoreo</button>
+    </section>
+
+    <script async defer src="js/monitoreo.js"></script>
+
+</body>
+</html>

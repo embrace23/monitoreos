@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: 70px;
+    background-color: rgba(233,85,14, .6);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header img{
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+}
+
+#opciones{
+    display: flex;
+    justify-content: space-around;
+}
+
+#seccionMeses, #seccionEvaluador, #seccionTipoMonitoreo, #seccionOps {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#selectMeses, #selectEvaluador, #selectTipoMonitoreo, #selectOps {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#botonMonitorear{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.botones{
+    margin-top: 150px;
+}
+
+#tablaChat, #tablaCoordinacion{
+    display: none;
+}
+
+#botonFinalizar{
+    margin-top: 50px;
+}
